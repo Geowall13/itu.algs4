@@ -26,11 +26,11 @@ import sys
 
 # Change sys.stdin so it provides universal newline support. 
 
-if (sys.hexversion < 0x03000000):
-    import os
-    sys.stdin = os.fdopen(sys.stdin.fileno(), 'rU', 0)
-else:    
-    sys.stdin = open(sys.stdin.fileno(), 'r', newline=None)
+#if (sys.hexversion < 0x03000000):
+#   import os
+#   sys.stdin = os.fdopen(sys.stdin.fileno(), 'rU', 0)
+#else:    
+#   sys.stdin = open(sys.stdin.fileno(), 'r', newline=None)
 
 #=======================================================================
 # print to stderr
