@@ -1,4 +1,5 @@
 import pytest
+import random
 
 from itu.algs4.fundamentals.bag import Bag
 
@@ -24,10 +25,12 @@ def test_size_and_len(b):
         b.add(i)
 
 def test_iter(b):
-    for i in range(10):
+    lo = random.randint(-(2**8), -1)
+    hi = random.randint(1, 2**8)
+    for i in range(lo, hi):
         b.add(i)
     l = []
-    for i in iter(b):
+    for i in b:
         l.append(i)
-    for i in range(10):
+    for i in range(lo, hi):
         assert(i in l)
