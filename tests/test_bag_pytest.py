@@ -11,17 +11,17 @@ def test_add(b):
     b.add(-1)
     b.add(2147483648)
     b.add(0)
-    assert(b.size() == 3)
+    assert b.size() == 3
 
 def test_is_empty(b):
-    assert(b.is_empty())
+    assert b.is_empty()
     b.add(1)
-    assert(not b.is_empty())
+    assert not b.is_empty()
 
 def test_size_and_len(b):
     for i in range(100):
-        assert(b.size() == i)
-        assert(len(b) == i) # Currently just calls size()
+        assert b.size() == i
+        assert len(b) == i # Currently just calls size()
         b.add(i)
 
 def test_iter(b):
@@ -33,4 +33,4 @@ def test_iter(b):
     for i in b:
         l.append(i)
     for i in range(lo, hi):
-        assert(i in l)
+        assert i in l
