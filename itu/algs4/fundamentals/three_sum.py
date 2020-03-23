@@ -2,8 +2,11 @@ class ThreeSum:
     #
     @staticmethod
     def count(a):
-        # Count triples that sum to 0
-        # param list a: A list of integers containing no duplicates
+        """
+        Count triples that sum to 0
+        
+        :param a: A list of integers containing no duplicates
+        """
         n = len(a)
         count = 0
         for i in range(n):

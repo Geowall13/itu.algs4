@@ -4,8 +4,11 @@ from itu.algs4.fundamentals import binary_search
 class ThreeSumFast:
     @staticmethod
     def count(a):
-        # Count triples that sum to 0
-        # param list a: A list of integers containing no duplicates
+        """
+        Count triples that sum to 0
+
+        :param a: A list of integers containing no duplicates
+        """
         a.sort()
         n = len(a)
         count = 0
